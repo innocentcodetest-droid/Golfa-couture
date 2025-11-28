@@ -1,3 +1,5 @@
+import { url } from "inspector";
+
 export interface Product {
   id: number;
   name: string;
@@ -15,12 +17,12 @@ export const products: Product[] = [
     id: 1,
     name: "Tissu Bazin Riche Premium",
     category: "tissu",
-    price: 45000,
-    oldPrice: 65000,
+    price: 7500,
+    oldPrice: 10500,
     images: [
-      "https://images.unsplash.com/photo-1558769132-cb1aea3c8564?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&h=600&fit=crop"
+      '/images/Image3.jpeg',
+      '/images/Image2.jpeg',
+      '/images/Image1.jpeg',
     ],
     isNew: true,
     publishedDate: "2025-11-25",
@@ -28,86 +30,82 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: "Costume 3 Pièces Classique",
+    name: "Tissu 3 Pièces Classique",
     category: "costume",
-    price: 125000,
-    oldPrice: 175000,
+    price: 7500,
+    oldPrice: 10500,
     images: [
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=500&h=600&fit=crop"
+      '/images/Image1.jpeg',
+      '/images/Image2.jpeg',
+      '/images/Image3.jpeg',
     ],
     isNew: true,
     publishedDate: "2025-11-24",
-    description: "Costume élégant en laine, coupe moderne"
+    description: "Tissu élégant en laine, coupe moderne"
   },
   {
     id: 3,
-    name: "Chemise Oxford Bleu Marine",
+    name: "Tissu Oxford Bleu Marine",
     category: "chemise",
-    price: 35000,
+    price: 8500,
     images: [
-      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1603252109360-909baaf261c7?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500&h=600&fit=crop"
+      '/images/Image4.jpeg',
+      '/images/Image5.jpeg',
+      '/images/Image6.jpeg',
     ],
     isNew: false,
     publishedDate: "2025-11-20",
-    description: "Chemise en coton oxford, coupe ajustée"
+    description: "Tissu en coton oxford, coupe ajustée"
   },
   {
     id: 4,
-    name: "Tissu Wax Africain",
+    name: "Tissu Qualité Premium",
     category: "tissu",
-    price: 25000,
+    price: 9500,
     oldPrice: 35000,
     images: [
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1558769132-cb1aea3c8564?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=500&h=600&fit=crop"
+      '/images/Image7.jpeg',
+      '/images/Image8.jpeg',
+      '/images/Image9.jpeg',
     ],
     isNew: true,
     publishedDate: "2025-11-26",
-    description: "Wax authentique, motifs traditionnels africains"
+    description: "Tissu de qualité supérieure, parfait pour les vêtements de qualité"
   },
   {
     id: 5,
-    name: "Pantalon Chino Beige",
-    category: "pantalon",
-    price: 42000,
+    name: "Tissu Chino Beige",
+    category: "tissu",
+    price: 6500,
     images: [
-      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=500&h=600&fit=crop"
+      '/images/Image8.jpeg',
+      '/images/Image7.jpeg',
+      '/images/Image6.jpeg',
     ],
     isNew: false,
     publishedDate: "2025-11-18",
-    description: "Pantalon chino confortable, coupe droite"
+    description: "Tissu chino confortable, coupe droite"
   },
   {
     id: 6,
-    name: "Tissu Coton Premium",
+    name: "Tissu coton",
     category: "tissu",
     price: 18000,
     oldPrice: 28000,
     images: [
-      "https://images.unsplash.com/photo-1604052511689-bde456fb2874?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1558769132-cb1aea3c8564?w=500&h=600&fit=crop"
+     '/images/Image3.jpeg',
     ],
     isNew: false,
     publishedDate: "2025-11-15",
-    description: "Coton de haute qualité pour chemises et pantalons"
+    description: "Tissu coton de haute qualité"
   },
   {
     id: 7,
-    name: "Chemise Blanche Cérémonie",
-    category: "chemise",
-    price: 38000,
+    name: "Tissu de Cérémonie",
+    category: "tissu",
+    price: 10000,
     images: [
-      "https://images.unsplash.com/photo-1603252109360-909baaf261c7?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=500&h=600&fit=crop"
+      '/images/Image6.jpeg',
     ],
     isNew: true,
     publishedDate: "2025-11-27",
@@ -115,33 +113,31 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    name: "Costume Noir Slim Fit",
-    category: "costume",
-    price: 150000,
-    oldPrice: 220000,
+    name: "Tissu bleu marine",
+    category: "tissu",
+    price: 6500,
+    oldPrice: 10500,
     images: [
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=500&h=600&fit=crop"
+      '/images/Image5.jpeg',
     ],
     isNew: true,
     publishedDate: "2025-11-28",
-    description: "Costume noir élégant, coupe slim moderne"
+    description: "Tissu bleu marine, coupe moderne"
   },
   {
     id: 9,
-    name: "Tissu Soie Mélangée",
+    name: "Tissu Blanc gris",
     category: "tissu",
-    price: 55000,
+    price: 6500,
     oldPrice: 75000,
     images: [
-      "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1558769132-cb1aea3c8564?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1604052511689-bde456fb2874?w=500&h=600&fit=crop"
+      '/images/Image4.jpeg',
+      '/images/Image5.jpeg',
+      '/images/Image6.jpeg',
     ],
     isNew: true,
     publishedDate: "2025-11-26",
-    description: "Tissu soie mélangée luxueux, tombé parfait"
+    description: "Tissu blanc gris, coupe moderne"
   }
 ];
 
