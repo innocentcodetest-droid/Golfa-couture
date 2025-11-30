@@ -28,11 +28,11 @@ export function OrderDialog({ product, open, onOpenChange }: OrderDialogProps) {
     const message = `
 Nouvelle Commande - GOLFA COUTURE
 
-Produit: ${product.name}
+Produit reference: ${product.name}
 Prix: ${formatPrice(product.price)}
 Catégorie: ${product.category}
 
-Client:
+Informations du client:
 Nom: ${formData.nom}
 Prénom: ${formData.prenom}
 Téléphone: ${formData.telephone}

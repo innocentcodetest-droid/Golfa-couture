@@ -1,5 +1,3 @@
-import { url } from "inspector";
-
 export interface Product {
   id: number;
   name: string;
@@ -12,7 +10,8 @@ export interface Product {
   description: string;
 }
 
-export const products: Product[] = [
+// Produits par défaut (fallback si l'API ne répond pas)
+const defaultProducts: Product[] = [
   {
     id: 1,
     name: "Tissu Bazin Riche Premium",
@@ -140,6 +139,26 @@ export const products: Product[] = [
     description: "Tissu blanc gris, coupe moderne"
   }
 ];
+
+// Fonction pour charger les produits depuis l'API
+// Pour les composants serveur, on peut utiliser directement le JSON
+export async function getProductsFromAPI(): Promise<Product[]> {
+  try {
+    const response = await fetch('/api/products', { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error('Erreur lors de la récupération des produits');
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Erreur lors du chargement des produits:', error);
+    // Fallback vers les produits par défaut
+    return defaultProducts;
+  }
+}
+
+// Export pour compatibilité avec le code existant
+// Les composants clients devront utiliser getProductsFromAPI() ou getProducts() de api.ts
+export const products = defaultProducts;
 
 export function getDiscountPercentage(price: number, oldPrice?: number): number {
   if (!oldPrice) return 0;
