@@ -131,7 +131,7 @@ export default function Home() {
               className="bg-amber-600 hover:bg-amber-700 text-white text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6"
               onClick={() => window.location.href = '/produits'}
             >
-              Découvrir la Collection
+              Découvrir nos articles
             </Button>
           </div>
         </div>
